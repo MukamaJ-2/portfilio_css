@@ -1,0 +1,162 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    max-width: 800px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  h2 {
+    color: #34495e;
+    border-bottom: 2px solid #95a5a6;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+  
+  hr {
+    border: none;
+    height: 1px;
+    background-color: #95a5a6;
+    margin: 2rem auto;
+    width: 80%;
+  }
+  
+  p {
+    color: #34495e;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+    text-align: center;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  ul li {
+    margin-bottom: 1rem;
+    color: #34495e;
+    text-align: center;
+  }
+  
+  strong {
+    color: #2c3e50;
+  }
+  
+  img {
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 2rem auto;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+  }
+  
+  th, td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #95a5a6;
+  }
+  
+  th {
+    background-color: #34495e;
+    color: #ffffff;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #ecf0f1;
+  }
+  
+  iframe {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    display: block;
+  }
+  
+  a {
+    color: #34495e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #2c3e50;
+    text-decoration: underline;
+  }
+  
+  .contact-info li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .career-goals {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 600px;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+      margin: 1rem;
+      border-radius: 10px;
+    }
+    
+    table {
+      display: block;
+      overflow-x: auto;
+    }
+    
+    iframe {
+      height: 250px;
+      width: 100%;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+  }
