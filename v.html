@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mukama Joseph's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <button id="theme-toggle" class="theme-btn">🌓</button>
+    
+    <div class="container">
+      <!-- Existing content remains exactly the same -->
+      <!-- ... all your existing content ... -->
+    </div>
+
+    <script>
+      // Theme toggle functionality
+      const themeToggle = document.getElementById('theme-toggle');
+      const body = document.body;
+
+      const currentTheme = localStorage.getItem('theme');
+      if (currentTheme) {
+        body.classList.add(currentTheme);
+      }
+
+      themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-theme');
+        if (body.classList.contains('dark-theme')) {
+          localStorage.setItem('theme', 'dark-theme');
+        } else {
+          localStorage.removeItem('theme');
+        }
+      });
+    </script>
+  </body>
+</html>
