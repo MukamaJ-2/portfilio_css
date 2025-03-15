@@ -1,9 +1,9 @@
 function heading() {
     return(
       <>
+      
       <h1>MUKAMA JOSEPH</h1>
-  
-  <hr />
+
   
   <p>
     I am a student at Uganda Christian University pursuing a Bachelor Degree in
