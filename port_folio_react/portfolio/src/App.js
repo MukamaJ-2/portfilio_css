@@ -1,63 +1,43 @@
-import { useState, useEffect } from 'react'
-import GeneralComponent from './components/generalComponent';
-import HobbyVideo from './components/hobbyVideo';
-import ContactInformation from './components/contactInformation';
-import CareerGoal from './components/careerGoals';
-import PersonalDetails from './components/personalDetails';
-import Profile from './components/profile';
-import LinkNavigation from './components/linkNavigation';
-import heading from './components/heading';
-import ResultComponent from './components/ResultComponent';
+import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import Portfolio from './components/Portfolio'
+import Login from './components/Login'
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-  useEffect(() => {
-    // Force light mode by default
-    localStorage.setItem('theme', 'light');
-    if (document.body.classList.contains('dark-mode')) {
-      document.body.classList.remove('dark-mode');
+  const handleLogin = (credentials) => {
+    // Simple authentication - in production, this should be replaced with proper authentication
+    if (credentials.username === "admin" && credentials.password === "password") {
+      setIsAuthenticated(true);
+      return true;
     }
-  }, []);
-
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-    document.body.classList.toggle('dark-mode');
-    localStorage.setItem('theme', isDarkMode ? 'light' : 'dark');
+    return false;
   };
 
-  
-  
-  
   return (
-    <>
-    
-      <div className="theme-toggle">
-        <button id="theme-switch" onClick={toggleTheme}>
-          <span className="mode-icon">{isDarkMode ? '☀️' : '🌙'}</span>
-          <span className="mode-text">{isDarkMode ? 'Light' : 'Dark'}</span>
-        </button>
-      </div>
-      
-
-      <GeneralComponent
-      heading="MUKAMA JOSEPH"
-      
-      paragraph="I am a student at Uganda Christian University pursuing a Bachelor Degree in
-    Computer Science. Web programming has been among my
-    courses of interest cause before joining I had a dream of becoming a web developer
-    and with this, I think it will contribute much to my success"/> 
-      <PersonalDetails/>
-      <Profile/>
-      <HobbyVideo/>
-      <ResultComponent/>
-      <LinkNavigation/>
-      <ContactInformation/>
-      <CareerGoal/>
-    </>
+    <Router>
+      <Routes>
+        <Route 
+          path="/login" 
+          element={
+            isAuthenticated ? 
+              <Navigate to="/portfolio" /> : 
+              <Login onLogin={handleLogin} />
+          } 
+        />
+        <Route 
+          path="/portfolio" 
+          element={
+            isAuthenticated ? 
+              <Portfolio /> : 
+              <Navigate to="/login" />
+          } 
+        />
+        <Route path="/" element={<Navigate to="/login" />} />
+      </Routes>
+    </Router>
   )
 }
 
-
 export default App
-
