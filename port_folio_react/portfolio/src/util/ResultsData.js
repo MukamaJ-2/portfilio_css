@@ -1,45 +1,86 @@
-
-export const RESULTS =[
-    {
-        "id": 1,
-        "course_code": "ICT1102",
-        "course_title": "Essential Hardware and Software Concepts",
-        "score": 90,
-        "credit_units": 4
+export const RESULTS = {
+    year1: {
+      sem1: [
+        {
+          courseCode: 'ICT1102',
+          courseTitle: 'Essential Hardware and Software Concepts',
+          grade: 'A',
+          creditUnits: 4
+        },
+        {
+          courseCode: 'ICT1103',
+          courseTitle: 'Fundamentals of Computing',
+          grade: 'C+',
+          creditUnits: 4
+        },
+        {
+          courseCode: 'CSC1101',
+          courseTitle: 'Structured Programming',
+          grade: 'B',
+          creditUnits: 4
+        },
+        {
+          courseCode: 'MTH1102',
+          courseTitle: 'Discrete Mathematics',
+          grade: 'B-',
+          creditUnits: 3
+        },
+        {
+          courseCode: 'LNG1101',
+          courseTitle: 'Writing and Study Skills',
+          grade: 'A',
+          creditUnits: 3
+        },
+        {
+          courseCode: 'TBS1103',
+          courseTitle: 'Understanding the Old Testament',
+          grade: 'A',
+          creditUnits: 3
+        }
+      ],
+      sem2: [
+        {
+          courseCode: 'CSC1201',
+          courseTitle: 'Object Oriented Programming',
+          grade: 'B+',
+          creditUnits: 4
+        },
+        {
+          courseCode: 'CSC1202',
+          courseTitle: 'Data Structures and Algorithms',
+          grade: 'B',
+          creditUnits: 4
+        }
+      ]
     },
-    {
-        "id": 2,
-        "course_code": "ICT1103",
-        "course_title": "Fundamentals of Computing",
-        "score": 65,
-        "credit_units": 4
-    },
-    {
-        "id": 3,
-        "course_code": "CSC1101",
-        "course_title": "Structured Programming",
-        "score": 75,
-        "credit_units": 4
-    },
-    {
-        "id": 4,
-        "course_code": "MTH1102",
-        "course_title": "Discrete Mathematics",
-        "score": 70,
-        "credit_units": 3
-    },
-    {
-        "id": 5,
-        "course_code": "LNG1101",
-        "course_title": "Writing and Study Skills",
-        "score": 90,
-        "credit_units": 3
-    },
-    {
-        "id": 6,
-        "course_code": "TBS1103",
-        "course_title": "Understanding the Old Testament",
-        "score": 90,
-        "credit_units": 3
+    year2: {
+      sem1: [
+        {
+          courseCode: 'CSC2101',
+          courseTitle: 'Database Systems',
+          grade: 'A',
+          creditUnits: 4
+        },
+        {
+          courseCode: 'CSC2102',
+          courseTitle: 'Web Programming',
+          grade: 'A-',
+          creditUnits: 4
+        }
+      ],
+      sem2: [
+        {
+          courseCode: 'CSC2201',
+          courseTitle: 'Software Engineering',
+          grade: 'B+',
+          creditUnits: 4
+        },
+        {
+          courseCode: 'CSC2202',
+          courseTitle: 'Computer Networks',
+          grade: 'B',
+          creditUnits: 4
+        }
+      ]
     }
-]
+  };
