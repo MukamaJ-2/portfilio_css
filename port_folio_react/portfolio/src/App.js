@@ -34,10 +34,13 @@ function App() {
               <Navigate to="/login" />
           } 
         />
+        <Route path="home" element={<home />}></Route>
+        <Route path="/results" element={<results />}></Route>
+        <Route path="/hobby" element={<hobbyVideo />}></Route>
         <Route path="/" element={<Navigate to="/login" />} />
       </Routes>
     </Router>
   )
 }
 
-export default App
+export default App;
